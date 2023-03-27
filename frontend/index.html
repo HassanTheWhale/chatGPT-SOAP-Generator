@@ -62,7 +62,7 @@
       </div>
 
       <!-- Soap Generated -->
-      <div class="card p-3 mt-3">
+      <div class="card p-3 my-3">
         <div class="text-center mb-3">
           <h4>Generated SOAP Note</h4>
           <p class="text-muted">
@@ -71,7 +71,7 @@
         </div>
         <div class="row">
           <!-- subjective -->
-          <div class="col-md-3 border-end">
+          <div class="col-md-3 border-end" id="subjective">
             <h5 class="text-center mb-4">
               <span class="badge bg-secondary">Subjective</span>
             </h5>
@@ -84,7 +84,7 @@
           </div>
 
           <!-- objective -->
-          <div class="col-md-3 border-end">
+          <div class="col-md-3 border-end" id="objective">
             <h5 class="text-center mb-4">
               <span class="badge bg-danger">Objective</span>
             </h5>
@@ -97,7 +97,7 @@
           </div>
 
           <!-- Assessment -->
-          <div class="col-md-3 border-end">
+          <div class="col-md-3 border-end" id="assessment">
             <h5 class="text-center mb-4">
               <span class="badge bg-info">Assessment</span>
             </h5>
@@ -110,7 +110,7 @@
           </div>
 
           <!-- Treatment Plan -->
-          <div class="col-md-3">
+          <div class="col-md-3" id="treatmentPlan">
             <h5 class="text-center mb-4">
               <span class="badge bg-success">Treatment Plan</span>
             </h5>
@@ -128,34 +128,51 @@
           </div>
 
           <!-- subjective -->
-          <div class="col-md-3 border-end">
+          <div class="col-md-3 border-end" id="subjectiveD">
             <h5 class="text-center mb-4">
               <span class="badge bg-secondary">Deleted Subjective</span>
             </h5>
           </div>
 
           <!-- objective -->
-          <div class="col-md-3 border-end">
+          <div class="col-md-3 border-end" id="objectiveD">
             <h5 class="text-center mb-4">
               <span class="badge bg-danger">Deleted Objective</span>
             </h5>
           </div>
 
           <!-- Assessment -->
-          <div class="col-md-3 border-end">
+          <div class="col-md-3 border-end" id="assessmentD">
             <h5 class="text-center mb-4">
               <span class="badge bg-info">Deleted Assessment</span>
             </h5>
           </div>
 
           <!-- Treatment Plan -->
-          <div class="col-md-3">
+          <div class="col-md-3" id="treatmentPlanD">
             <h5 class="text-center mb-4">
               <span class="badge bg-success">Deleted Treatment Plan</span>
             </h5>
           </div>
+
+          <!-- Generate ICD -->
+          <div class="col-12 text-end mt-5">
+            <button class="btn btn-warning">Generate ICD-10 Codes</button>
+          </div>
         </div>
       </div>
+
+      <!-- ICD Generated -->
+      <div class="card p-3 mt-3">
+        <div class="text-center mb-3">
+          <h4>Generated ICD-10 Code</h4>
+          <p class="text-muted">
+            In this section, you will be able to see the generated ICD-10 Codes.
+          </p>
+        </div>
+      </div>
+
+      <hr />
 
       <!-- footer alear -->
       <div class="alert alert-light mb-0 mt-3 text-center" role="alert">
