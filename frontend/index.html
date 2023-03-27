@@ -15,7 +15,11 @@
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.1.5/sweetalert2.min.css"
       crossorigin="anonymous"
     />
 
@@ -58,7 +62,7 @@
           <button
             type="button"
             class="btn btn-lg btn-success rounded-circle"
-            onclick="removeAll()"
+            onclick="getSOAPModal();"
           >
             +
           </button>
@@ -137,7 +141,7 @@
 
           <!-- Generate ICD -->
           <div class="col-12 text-end mt-5">
-            <button class="btn btn-warning" onclick="getActive()">
+            <button class="btn btn-warning" onclick="getICD()">
               Generate ICD-10 Codes
             </button>
           </div>
@@ -170,12 +174,59 @@
         <span class="fw-bold">Alpha</span> team!
       </div>
     </div>
+
+    <!-- modal -->
+    <div
+      class="modal fade"
+      id="generateSOAP"
+      tabindex="-1"
+      aria-labelledby="generateSOAPLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="generateSOAPLabel">
+              Generate New SOAP
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <label for="soapInput" class="form-label"
+                >Enter the patient information:</label
+              >
+              <textarea
+                class="form-control"
+                id="soapInput"
+                placeholder="A 30 years old male patient with head pain for 1 week."
+              ></textarea>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success" onclick="getSOAP()">
+              Get SOAP
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- scripts -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
       crossorigin="anonymous"
     ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.1.5/sweetalert2.min.js"
+      crossorigin="anonymous"
+    ></script>
+
     <script src="./js/move.js"></script>
     <script src="./js/get.js"></script>
     <script src="./js/SOAP.js"></script>

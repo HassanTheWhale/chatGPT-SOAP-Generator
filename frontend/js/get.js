@@ -1,8 +1,5 @@
 let all = [];
-let sub_arr_active = [];
-let obj_arr_active = [];
-let ass_arr_active = [];
-let treat_arr_active = [];
+const icd_list = document.getElementById("icd");
 
 function addElements(sub, obj, ass, treat) {
   // subjective
@@ -79,9 +76,15 @@ function removeAll() {
   all.forEach((element) => {
     element.remove();
   });
+  icd_list.innerHTML = "";
 }
 
 function getActive() {
+  let sub_arr_active = [];
+  let obj_arr_active = [];
+  let ass_arr_active = [];
+  let treat_arr_active = [];
+
   sub_arr_active.length = 0;
   const sActive = subjective.querySelectorAll(".SOAPBtn");
   sActive.forEach((element) => {
@@ -106,8 +109,13 @@ function getActive() {
     treat_arr_active.push(element.innerText);
   });
 
-  console.log(sub_arr_active);
-  console.log(obj_arr_active);
-  console.log(ass_arr_active);
-  console.log(treat_arr_active);
+  let result = [];
+  result.push(sub_arr_active, obj_arr_active, ass_arr_active, treat_arr_active);
+
+  return result;
+}
+
+function getSOAPModal() {
+  const myModal = new bootstrap.Modal(document.getElementById("generateSOAP"));
+  myModal.show();
 }
