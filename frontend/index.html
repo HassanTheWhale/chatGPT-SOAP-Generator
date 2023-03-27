@@ -55,7 +55,11 @@
 
         <!-- btn -->
         <section>
-          <button type="button" class="btn btn-lg btn-success rounded-circle">
+          <button
+            type="button"
+            class="btn btn-lg btn-success rounded-circle"
+            onclick="removeAll()"
+          >
             +
           </button>
         </section>
@@ -75,12 +79,6 @@
             <h5 class="text-center mb-4">
               <span class="badge bg-secondary">Subjective</span>
             </h5>
-            <button
-              class="btn btn-sm btn-outline-secondary d-flex align-items-center"
-            >
-              Test 1 &nbsp;
-              <img src="./images/close.png" width="16px" alt="close" />
-            </button>
           </div>
 
           <!-- objective -->
@@ -88,12 +86,6 @@
             <h5 class="text-center mb-4">
               <span class="badge bg-danger">Objective</span>
             </h5>
-            <button
-              class="btn btn-sm btn-outline-danger d-flex align-items-center"
-            >
-              Test 1 &nbsp;
-              <img src="./images/close.png" width="16px" alt="close" />
-            </button>
           </div>
 
           <!-- Assessment -->
@@ -101,12 +93,6 @@
             <h5 class="text-center mb-4">
               <span class="badge bg-info">Assessment</span>
             </h5>
-            <button
-              class="btn btn-sm btn-outline-info d-flex align-items-center"
-            >
-              Test 1 &nbsp;
-              <img src="./images/close.png" width="16px" alt="close" />
-            </button>
           </div>
 
           <!-- Treatment Plan -->
@@ -114,12 +100,6 @@
             <h5 class="text-center mb-4">
               <span class="badge bg-success">Treatment Plan</span>
             </h5>
-            <button
-              class="btn btn-sm btn-outline-success d-flex align-items-center"
-            >
-              Test 1 &nbsp;
-              <img src="./images/close.png" width="16px" alt="close" />
-            </button>
           </div>
 
           <!-- Disabled List -->
@@ -186,6 +166,7 @@
       integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
       crossorigin="anonymous"
     ></script>
-    <script src="./js/script.js"></script>
+    <script src="./js/move.js"></script>
+    <script src="./js/get.js"></script>
   </body>
 </html>
