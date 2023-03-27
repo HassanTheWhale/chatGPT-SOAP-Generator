@@ -1,6 +1,11 @@
 function getSOAP() {
-  removeAll();
-  addElements(["1", "2"], ["3", "4"], ["5", "6"], ["7", "8"]);
+  let formMSG = document.getElementById("soapInput").value;
+  // ajax
+  if (window.XMLHttpRequest) {
+    xmlhttp = new XMLHttpRequest();
+  } else {
+    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+  }
 
   // ajax
   if (window.XMLHttpRequest) {
@@ -9,13 +14,30 @@ function getSOAP() {
     xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
   }
 
-  xmlhttp.open("GET", `./php/adminMedSelect.php`, false);
+  xmlhttp.open("GET", `../backend/generateSOAP.php?msg=${formMSG}`, false);
   xmlhttp.send(null);
-  if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-    result = JSON.parse(xmlhttp.responseText);
-  }
-}
 
+  if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+    let result = JSON.parse(xmlhttp.responseText);
+    removeAll();
+    if (isArrayEmpty(result)) {
+      addElements(result["S"], result["O"], result["A"], result["P"]);
+      Swal.fire({
+        title: "Done!",
+        text: "Here is your SOAP Note!",
+        icon: "success",
+        confirmButtonText: "OK",
+      });
+      return;
+    }
+  }
+  Swal.fire({
+    title: "Error!",
+    text: "The SOAP Note couldn't be generated!",
+    icon: "error",
+    confirmButtonText: "OK",
+  });
+}
 
 function getICD() {
   let active = getActive();
@@ -28,15 +50,41 @@ function getICD() {
     });
     return;
   }
-  icd_list.innerHTML = "";
-  let test = ["icd 1", "icd 2", "icd 3", "icd 4", "icd 5"];
-  test.forEach((element) => {
-    let icd = document.createElement("li");
-    icd.innerText = element;
-    icd_list.appendChild(icd);
+
+  // ajax
+  if (window.XMLHttpRequest) {
+    xmlhttp = new XMLHttpRequest();
+  } else {
+    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+  }
+
+  xmlhttp.open("GET", `../backend/generateICD.php?msg=${active}`, false);
+  xmlhttp.send(null);
+
+  if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+    let result = JSON.parse(xmlhttp.responseText);
+    icd_list.innerHTML = "";
+    console.log(result);
+
+    result.forEach((element) => {
+      let icd = document.createElement("li");
+      icd.innerText = element["code"] + ": " + element["explanation"];
+      icd_list.appendChild(icd);
+    });
+
+    getICDA(active[2]);
+    return;
+  }
+
+  Swal.fire({
+    title: "Error!",
+    text: "The ICD-10 couldn't be generated: ",
+    icon: "error",
+    confirmButtonText: "OK",
   });
 }
 
+// check if array of array is empty 100%
 function isArrayEmpty(arr) {
   if (Array.isArray(arr) && arr.length) {
     return arr.every((subArr) => Array.isArray(subArr) && !subArr.length);

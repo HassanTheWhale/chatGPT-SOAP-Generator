@@ -1,5 +1,7 @@
 let all = [];
 const icd_list = document.getElementById("icd");
+const icdA_list = document.getElementById("icdA");
+const myModal = new bootstrap.Modal(document.getElementById("generateSOAP"));
 
 function addElements(sub, obj, ass, treat) {
   // subjective
@@ -10,7 +12,8 @@ function addElements(sub, obj, ass, treat) {
       "btn",
       "btn-outline-secondary",
       "btn-sm",
-      "me-1"
+      "me-1",
+      "mb-2"
     );
     button.textContent = element;
     button.onclick = function () {
@@ -27,7 +30,8 @@ function addElements(sub, obj, ass, treat) {
       "btn",
       "btn-outline-danger",
       "btn-sm",
-      "me-1"
+      "me-1",
+      "mb-2"
     );
     button.textContent = element;
     button.onclick = function () {
@@ -44,7 +48,8 @@ function addElements(sub, obj, ass, treat) {
       "btn",
       "btn-outline-info",
       "btn-sm",
-      "me-1"
+      "me-1",
+      "mb-2"
     );
     button.textContent = element;
     button.onclick = function () {
@@ -61,7 +66,8 @@ function addElements(sub, obj, ass, treat) {
       "btn",
       "btn-outline-success",
       "btn-sm",
-      "me-1"
+      "me-1",
+      "mb-2"
     );
     button.textContent = element;
     button.onclick = function () {
@@ -116,6 +122,5 @@ function getActive() {
 }
 
 function getSOAPModal() {
-  const myModal = new bootstrap.Modal(document.getElementById("generateSOAP"));
   myModal.show();
 }

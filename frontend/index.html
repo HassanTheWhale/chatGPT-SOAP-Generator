@@ -159,9 +159,7 @@
         <ul>
           <li>
             ICD-10 Codes:
-            <ul id="icd">
-              <li></li>
-            </ul>
+            <ul id="icd"></ul>
           </li>
         </ul>
       </div>
@@ -209,7 +207,12 @@
             </form>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-success" onclick="getSOAP()">
+            <button
+              type="button"
+              class="btn btn-success"
+              data-bs-dismiss="modal"
+              onclick="getSOAP()"
+            >
               Get SOAP
             </button>
           </div>
