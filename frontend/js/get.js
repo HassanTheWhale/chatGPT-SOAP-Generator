@@ -1,16 +1,8 @@
-// arrays of notes
-let sub_arr = ["Test 1", "Test 5"];
-let obj_arr = ["Test 2", "Test 6"];
-let ass_arr = ["Test 3", "Test 7"];
-let treat_arr = ["Test 4", "Test 8"];
-
 let all = [];
 let sub_arr_active = [];
 let obj_arr_active = [];
 let ass_arr_active = [];
 let treat_arr_active = [];
-
-addElements(sub_arr, obj_arr, ass_arr, treat_arr);
 
 function addElements(sub, obj, ass, treat) {
   // subjective

@@ -137,7 +137,9 @@
 
           <!-- Generate ICD -->
           <div class="col-12 text-end mt-5">
-            <button class="btn btn-warning">Generate ICD-10 Codes</button>
+            <button class="btn btn-warning" onclick="getActive()">
+              Generate ICD-10 Codes
+            </button>
           </div>
         </div>
       </div>
@@ -150,6 +152,14 @@
             In this section, you will be able to see the generated ICD-10 Codes.
           </p>
         </div>
+        <ul>
+          <li>
+            ICD-10 Codes:
+            <ul id="icd">
+              <li></li>
+            </ul>
+          </li>
+        </ul>
       </div>
 
       <hr />
@@ -168,5 +178,6 @@
     ></script>
     <script src="./js/move.js"></script>
     <script src="./js/get.js"></script>
+    <script src="./js/SOAP.js"></script>
   </body>
 </html>
