@@ -26,6 +26,143 @@
     <title>SOAP Generator | Practical Session 7</title>
   </head>
   <body>
+    <!-- container -->
+    <div class="container py-3">
+      <!-- Welcome Aleart -->
+      <!-- <div class="alert alert-light alert-dismissible fade show" role="alert">
+        <span class="fw-bold">Welcome.</span> Feel free to use this website to
+        help your patients
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="alert"
+          aria-label="Close"
+        ></button>
+      </div> -->
+
+      <!-- New Soap Request -->
+      <div
+        class="card p-3 d-flex justify-content-between align-items-center flex-row"
+      >
+        <!-- text -->
+        <section>
+          <h2>Generate New Soap</h2>
+          <p class="text-muted mb-0">
+            Click on the plus button on the right to start Generating a new
+            soap!
+          </p>
+        </section>
+
+        <!-- btn -->
+        <section>
+          <button type="button" class="btn btn-lg btn-success rounded-circle">
+            +
+          </button>
+        </section>
+      </div>
+
+      <!-- Soap Generated -->
+      <div class="card p-3 mt-3">
+        <div class="text-center mb-3">
+          <h4>Generated SOAP Note</h4>
+          <p class="text-muted">
+            In this section, you will be able to see the generated SOAP.
+          </p>
+        </div>
+        <div class="row">
+          <!-- subjective -->
+          <div class="col-md-3 border-end">
+            <h5 class="text-center mb-4">
+              <span class="badge bg-secondary">Subjective</span>
+            </h5>
+            <button
+              class="btn btn-sm btn-outline-secondary d-flex align-items-center"
+            >
+              Test 1 &nbsp;
+              <img src="./images/close.png" width="16px" alt="close" />
+            </button>
+          </div>
+
+          <!-- objective -->
+          <div class="col-md-3 border-end">
+            <h5 class="text-center mb-4">
+              <span class="badge bg-danger">Objective</span>
+            </h5>
+            <button
+              class="btn btn-sm btn-outline-danger d-flex align-items-center"
+            >
+              Test 1 &nbsp;
+              <img src="./images/close.png" width="16px" alt="close" />
+            </button>
+          </div>
+
+          <!-- Assessment -->
+          <div class="col-md-3 border-end">
+            <h5 class="text-center mb-4">
+              <span class="badge bg-info">Assessment</span>
+            </h5>
+            <button
+              class="btn btn-sm btn-outline-info d-flex align-items-center"
+            >
+              Test 1 &nbsp;
+              <img src="./images/close.png" width="16px" alt="close" />
+            </button>
+          </div>
+
+          <!-- Treatment Plan -->
+          <div class="col-md-3">
+            <h5 class="text-center mb-4">
+              <span class="badge bg-success">Treatment Plan</span>
+            </h5>
+            <button
+              class="btn btn-sm btn-outline-success d-flex align-items-center"
+            >
+              Test 1 &nbsp;
+              <img src="./images/close.png" width="16px" alt="close" />
+            </button>
+          </div>
+
+          <!-- Disabled List -->
+          <div class="col-12 my-3">
+            <hr />
+          </div>
+
+          <!-- subjective -->
+          <div class="col-md-3 border-end">
+            <h5 class="text-center mb-4">
+              <span class="badge bg-secondary">Deleted Subjective</span>
+            </h5>
+          </div>
+
+          <!-- objective -->
+          <div class="col-md-3 border-end">
+            <h5 class="text-center mb-4">
+              <span class="badge bg-danger">Deleted Objective</span>
+            </h5>
+          </div>
+
+          <!-- Assessment -->
+          <div class="col-md-3 border-end">
+            <h5 class="text-center mb-4">
+              <span class="badge bg-info">Deleted Assessment</span>
+            </h5>
+          </div>
+
+          <!-- Treatment Plan -->
+          <div class="col-md-3">
+            <h5 class="text-center mb-4">
+              <span class="badge bg-success">Deleted Treatment Plan</span>
+            </h5>
+          </div>
+        </div>
+      </div>
+
+      <!-- footer alear -->
+      <div class="alert alert-light mb-0 mt-3 text-center" role="alert">
+        Made with <span class="text-danger"> &hearts; </span> By
+        <span class="fw-bold">Alpha</span> team!
+      </div>
+    </div>
     <!-- scripts -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
