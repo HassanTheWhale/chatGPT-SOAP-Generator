@@ -1,7 +1,4 @@
 let all = [];
-const icd_list = document.getElementById("icd");
-const icdA_list = document.getElementById("icdA");
-const myModal = new bootstrap.Modal(document.getElementById("generateSOAP"));
 
 function addElements(sub, obj, ass, treat) {
   // subjective
@@ -91,25 +88,21 @@ function getActive() {
   let ass_arr_active = [];
   let treat_arr_active = [];
 
-  sub_arr_active.length = 0;
   const sActive = subjective.querySelectorAll(".SOAPBtn");
   sActive.forEach((element) => {
     sub_arr_active.push(element.innerText);
   });
 
-  obj_arr_active.length = 0;
   const oActive = objective.querySelectorAll(".SOAPBtn");
   oActive.forEach((element) => {
     obj_arr_active.push(element.innerText);
   });
 
-  ass_arr_active.length = 0;
   const aActive = assessment.querySelectorAll(".SOAPBtn");
   aActive.forEach((element) => {
     ass_arr_active.push(element.innerText);
   });
 
-  treat_arr_active.length = 0;
   const tActive = treatmentPlan.querySelectorAll(".SOAPBtn");
   tActive.forEach((element) => {
     treat_arr_active.push(element.innerText);

@@ -1,11 +1,5 @@
 function getSOAP() {
   let formMSG = document.getElementById("soapInput").value;
-  // ajax
-  if (window.XMLHttpRequest) {
-    xmlhttp = new XMLHttpRequest();
-  } else {
-    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-  }
 
   // ajax
   if (window.XMLHttpRequest) {
@@ -64,7 +58,6 @@ function getICD() {
   if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
     let result = JSON.parse(xmlhttp.responseText);
     icd_list.innerHTML = "";
-    console.log(result);
 
     result.forEach((element) => {
       let icd = document.createElement("li");
@@ -72,7 +65,6 @@ function getICD() {
       icd_list.appendChild(icd);
     });
 
-    getICDA(active[2]);
     return;
   }
 

@@ -7,10 +7,12 @@ const subjectiveD = document.querySelector("#subjectiveD");
 const objectiveD = document.querySelector("#objectiveD");
 const assessmentD = document.querySelector("#assessmentD");
 const treatmentPlanD = document.querySelector("#treatmentPlanD");
+const icd_list = document.getElementById("icd");
+// modal
+const myModal = new bootstrap.Modal(document.getElementById("generateSOAP"));
 
 // move cards
 function move(elem) {
-  console.log();
   switch (elem.parentNode.id) {
     case "subjective":
       subjectiveD.appendChild(elem);
